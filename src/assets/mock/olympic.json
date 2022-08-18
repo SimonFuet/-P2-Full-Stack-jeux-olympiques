@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "country": "Italy",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medals_count": 28,
+        "athlete_count": 372
+      },
+      {
+        "id": 2,
+        "year": 2016,
+        "city": "Rio de Janeiro",
+        "medals_count": 28,
+        "athlete_count": 375
+      },
+      {
+        "id": 3,
+        "year": 2020,
+        "city": "Tokyo",
+        "medals_count": 40,
+        "athlete_count": 381
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "country": "Spain",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medals_count": 20,
+        "athlete_count": 315
+      },
+      {
+        "id": 2,
+        "year": 2016,
+        "city": "Rio de Janeiro",
+        "medals_count": 17,
+        "athlete_count": 312
+      },
+      {
+        "id": 3,
+        "year": 2020,
+        "city": "Tokyo",
+        "medals_count": 17,
+        "athlete_count": 321
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "country": "United States",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medals_count": 109,
+        "athlete_count": 610
+      },
+      {
+        "id": 2,
+        "year": 2016,
+        "city": "Rio de Janeiro",
+        "medals_count": 123,
+        "athlete_count": 652
+      },
+      {
+        "id": 3,
+        "year": 2020,
+        "city": "Tokyo",
+        "medals_count": 113,
+        "athlete_count": 626
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "country": "Germany",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medals_count": 44,
+        "athlete_count": 425
+      },
+      {
+        "id": 2,
+        "year": 2016,
+        "city": "Rio de Janeiro",
+        "medals_count": 44,
+        "athlete_count": 422
+      },
+      {
+        "id": 3,
+        "year": 2020,
+        "city": "Tokyo",
+        "medals_count": 37,
+        "athlete_count": 425
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "country": "France",
+    "participations": [
+      {
+        "id": 1,
+        "year": 2012,
+        "city": "Londres",
+        "medals_count": 35,
+        "athlete_count": 423
+      },
+      {
+        "id": 2,
+        "year": 2016,
+        "city": "Rio de Janeiro",
+        "medals_count": 45,
+        "athlete_count": 412
+      },
+      {
+        "id": 3,
+        "year": 2020,
+        "city": "Tokyo",
+        "medals_count": 33,
+        "athlete_count": 403
+      }
+    ]
+  }
+]
