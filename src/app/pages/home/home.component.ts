@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { OlympicService } from 'src/app/core/services/olympic.service';
+import { map, Observable, of } from 'rxjs';
+import { Olympic } from 'src/app/core/models/Olympic'
+import { OlympicService } from 'src/app/core/services/olympic.service'
+import { LegendPosition, NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
+import { Participation } from 'src/app/core/models/Participation'
 
 @Component({
   selector: 'app-home',
@@ -8,11 +11,21 @@ import { OlympicService } from 'src/app/core/services/olympic.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public olympics$: Observable<any> = of(null);
+  public pieChartData: { name: string, value: number }[] = []
+  public view: [number, number] = [700, 400];
+  public showLabels: boolean = true;
+  public isDoughnut: boolean = false;
 
   constructor(private olympicService: OlympicService) {}
 
   ngOnInit(): void {
-    this.olympics$ = this.olympicService.getOlympics();
+    this.olympicService.getOlympics().subscribe(olympics => {
+      if (olympics != null) {
+        this.pieChartData = olympics.map((olympic: Olympic) => ({
+          name: olympic.country,
+          value: olympic.participations.reduce((acc: number, participation: Participation) => acc + participation.medals_count, 0)
+        }))
+      }
+    })
   }
 }
