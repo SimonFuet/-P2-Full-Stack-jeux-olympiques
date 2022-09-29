@@ -1,9 +1,15 @@
-<h2>Olympic games app</h2>
-<hr />
-<ngx-charts-pie-chart
-  [view]="view"
-  [results]="pieChartData"
-  [labels]="showLabels"
-  [doughnut]="isDoughnut"
->
-</ngx-charts-pie-chart>
+<div class="container">
+  <h2>Olympic games app</h2>
+  <hr />
+  <div class="tiles-container">
+    <app-tile title="Number of JOs" [value]="joCount"></app-tile>
+    <app-tile title="Number of countries" [value]="countryCount"></app-tile>
+  </div>
+  <ngx-charts-pie-chart
+    [view]="view"
+    [results]="pieChartData"
+    [labels]="showLabels"
+    [doughnut]="isDoughnut"
+  >
+  </ngx-charts-pie-chart>
+</div>

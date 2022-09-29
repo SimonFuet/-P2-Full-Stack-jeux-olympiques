@@ -1,0 +1,11 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  width: 200px;
+}
+
+.value {
+  font-weight: bold;
+}

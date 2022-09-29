@@ -16,6 +16,9 @@ export class HomeComponent implements OnInit {
   public showLabels: boolean = true;
   public isDoughnut: boolean = false;
 
+  public countryCount: number = 0
+  public joCount: number = 0
+
   constructor(private olympicService: OlympicService) {}
 
   ngOnInit(): void {
@@ -25,6 +28,9 @@ export class HomeComponent implements OnInit {
           name: olympic.country,
           value: olympic.participations.reduce((acc: number, participation: Participation) => acc + participation.medals_count, 0)
         }))
+
+        this.countryCount = olympics.length
+        this.joCount = new Set(olympics.flatMap(olympic => olympic.participations.map(p => p.year))).size
       }
     })
   }
