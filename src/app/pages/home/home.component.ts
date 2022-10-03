@@ -4,6 +4,7 @@ import { Olympic } from 'src/app/core/models/Olympic'
 import { OlympicService } from 'src/app/core/services/olympic.service'
 import { LegendPosition, NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
 import { Participation } from 'src/app/core/models/Participation'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
   public countryCount: number = 0
   public joCount: number = 0
 
-  constructor(private olympicService: OlympicService) {}
+  constructor(private olympicService: OlympicService, private router: Router) {}
 
   ngOnInit(): void {
     this.olympicService.getOlympics().subscribe(olympics => {
@@ -34,4 +35,9 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  onSelect(data: { name: string, value: number }): void {
+    this.router.navigateByUrl(`country/${data.name}`)
+  }
+
 }

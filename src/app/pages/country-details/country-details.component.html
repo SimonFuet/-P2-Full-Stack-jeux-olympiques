@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>{{ olympicName }}</h2>
+  <hr />
+  <div class="tiles-container">
+    <app-tile title="Number of JOs" [value]="participationCount"></app-tile>
+    <app-tile title="Total number of medals" [value]="totalMedalCount"></app-tile>
+    <app-tile title="Total number of athletes" [value]="totalAthleteCounts"></app-tile>
+  </div>
+  <ngx-charts-line-chart 
+    [view]="view" 
+    [results]="lineChartData"
+    [legend]="legend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [timeline]="timeline"
+    >
+  </ngx-charts-line-chart>
+  <a routerLink="/">Back</a>
+</div>
